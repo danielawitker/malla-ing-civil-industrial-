@@ -38,17 +38,20 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".course").forEach((curso) => {
       const nombre = curso.id;
       const reqs = requisitos[nombre] || [];
-      const desbloqueado = reqs.every((r) => estado[r]);
-      
+      const desbloqueado = reqs.every((r) => estado[r]) || reqs.length === 0;
+
       if (estado[nombre]) {
         curso.classList.add("approved");
         curso.classList.remove("locked");
-      } else if (!desbloqueado) {
-        curso.classList.add("locked");
-        curso.classList.remove("approved");
-      } else {
+        curso.classList.remove("unlocked");
+      } else if (desbloqueado) {
+        curso.classList.add("unlocked");
         curso.classList.remove("approved");
         curso.classList.remove("locked");
+      } else {
+        curso.classList.add("locked");
+        curso.classList.remove("approved");
+        curso.classList.remove("unlocked");
       }
     });
   }
@@ -58,12 +61,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const nombre = curso.id;
       const reqs = requisitos[nombre] || [];
       const desbloqueado = reqs.every((r) => estado[r]) || reqs.length === 0;
+
       if (!desbloqueado) return;
-      estado[nombre] = !estado[nombre]; // alternar aprobado
+
+      estado[nombre] = !estado[nombre]; // toggle aprobado
       actualizarEstado();
     });
   });
 
-  // Inicializa el estado
   actualizarEstado();
 });
+      
