@@ -9,8 +9,8 @@ const requisitos = {
   "Mecánica y Ondas": ["Introducción a la Mecánica"],
   "Teología III": ["Teología II"],
   "Probabilidades y estadísticas": ["Cálculo II"],
-  "Electricidad y Magnetismo": ["Cálculo II","Mecánica y Ondas"],
-  "Termodinámica": ["Cálculo II","Mecánica y Ondas"],
+  "Electricidad y Magnetismo": ["Cálculo II", "Mecánica y Ondas"],
+  "Termodinámica": ["Cálculo II", "Mecánica y Ondas"],
   "Estática": ["Mecánica y Ondas"],
   "Filosofía de las Ciencias": ["Ética"],
   "Modelos Estocásticos": ["Optimización"],
@@ -26,11 +26,16 @@ function update() {
   document.querySelectorAll('.course').forEach(div => {
     const name = div.id;
     const input = div.querySelector('input');
-    if (requisitos[name]) {
-      const ok = requisitos[name].every(req =>
-        document.getElementById(req)?.querySelector('input').checked
-      );
-      input.disabled = !ok;
+    const reqs = requisitos[name];
+
+    if (reqs) {
+      const enabled = reqs.every(req => {
+        const el = document.getElementById(req);
+        return el && el.querySelector('input').checked;
+      });
+      input.disabled = !enabled;
+    } else {
+      input.disabled = false;
     }
   });
 }
@@ -40,3 +45,4 @@ document.querySelectorAll('.course input').forEach(cb =>
 );
 
 window.onload = update;
+
