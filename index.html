@@ -1,91 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Malla Interactiva Ingeniería Civil Industrial</title>
-    <link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8">
+  <title>Malla Civil Industrial</title>
+  <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <h1>Malla Interactiva - Ingeniería Civil Industrial</h1>
+  <h1>Malla Interactiva – Ingeniería Civil Industrial</h1>
 
-    <h2>Año 1 - Semestre I</h2>
-    <div class="ramo"><input type="checkbox" id="Álgebra e Introducción al Cálculo"><label for="Álgebra e Introducción al Cálculo">Álgebra e Introducción al Cálculo</label></div>
-    <div class="ramo"><input type="checkbox" id="Fundamentos de Química"><label for="Fundamentos de Química">Fundamentos de Química</label></div>
-    <div class="ramo"><input type="checkbox" id="Programación"><label for="Programación">Programación</label></div>
-    <div class="ramo"><input type="checkbox" id="Bases para el Estudio de la Ingeniería"><label for="Bases para el Estudio de la Ingeniería">Bases para el Estudio de la Ingeniería</label></div>
-    <div class="ramo"><input type="checkbox" id="Taller de Proyectos de Ingeniería"><label for="Taller de Proyectos de Ingeniería">Taller de Proyectos de Ingeniería</label></div>
-    <div class="ramo"><input type="checkbox" id="Teología I"><label for="Teología I">Teología I</label></div>
-    <div class="ramo"><input type="checkbox" id="Antropología Filosófica"><label for="Antropología Filosófica">Antropología Filosófica</label></div>
+  <!-- Contenedor de semestres -->
+  <div class="grade-grid">
+    <!-- Repite este bloque por cada semestre -->
+    <div class="semester">
+      <h2>Año 1 · Semestre I</h2>
+      <div class="courses">
+        <div class="course" id="Álgebra e Introducción al Cálculo">
+          <input type="checkbox"><span class="checkmark"></span>
+          <label>Álgebra e Introducción al Cálculo</label>
+        </div>
+        <!-- Más ramos... -->
+      </div>
+    </div>
+    <!-- Fin semestre -->
 
-    <h2>Año 1 - Semestre II</h2>
-    <div class="ramo"><input type="checkbox" id="Álgebra Lineal"><label for="Álgebra Lineal">Álgebra Lineal</label></div>
-    <div class="ramo"><input type="checkbox" id="Cálculo I"><label for="Cálculo I">Cálculo I</label></div>
-    <div class="ramo"><input type="checkbox" id="Introducción a la Mecánica"><label for="Introducción a la Mecánica">Introducción a la Mecánica</label></div>
-    <div class="ramo"><input type="checkbox" id="Biología de los Microorganismos"><label for="Biología de los Microorganismos">Biología de los Microorganismos</label></div>
-    <div class="ramo"><input type="checkbox" id="Teología II"><label for="Teología II">Teología II</label></div>
-    <div class="ramo"><input type="checkbox" id="Optativo Arte y Literatura/Historia y Pensamiento Contemporáneo"><label for="Optativo Arte y Literatura/Historia y Pensamiento Contemporáneo">Optativo Arte y Literatura / Historia y Pensamiento Contemporáneo</label></div>
+    <!-- Repite para cada uno de los 11 semestres -->
+  </div>
 
-    <h2>Año 2 - Semestre III</h2>
-    <div class="ramo"><input type="checkbox" id="Ecuaciones diferenciales"><label for="Ecuaciones diferenciales">Ecuaciones diferenciales</label></div>
-    <div class="ramo"><input type="checkbox" id="Cálculo II"><label for="Cálculo II">Cálculo II</label></div>
-    <div class="ramo"><input type="checkbox" id="Mecánica y Ondas"><label for="Mecánica y Ondas">Mecánica y Ondas</label></div>
-    <div class="ramo"><input type="checkbox" id="Fundamentos de Economía"><label for="Fundamentos de Economía">Fundamentos de Economía</label></div>
-    <div class="ramo"><input type="checkbox" id="Teología III"><label for="Teología III">Teología III</label></div>
-    <div class="ramo"><input type="checkbox" id="Minor"><label for="Minor">Minor</label></div>
-
-    <h2>Año 2 - Semestre IV</h2>
-    <div class="ramo"><input type="checkbox" id="Probabilidades y estadísticas"><label for="Probabilidades y estadísticas">Probabilidades y estadísticas</label></div>
-    <div class="ramo"><input type="checkbox" id="Electricidad y Magnetismo"><label for="Electricidad y Magnetismo">Electricidad y Magnetismo</label></div>
-    <div class="ramo"><input type="checkbox" id="Termodinámica"><label for="Termodinámica">Termodinámica</label></div>
-    <div class="ramo"><input type="checkbox" id="Estática"><label for="Estática">Estática</label></div>
-    <div class="ramo"><input type="checkbox" id="Ética"><label for="Ética">Ética</label></div>
-    <div class="ramo"><input type="checkbox" id="Minor"><label for="Minor">Minor</label></div>
-
-    <h2>Año 3 - Semestre V</h2>
-    <div class="ramo"><input type="checkbox" id="Optimización"><label for="Optimización">Optimización</label></div>
-    <div class="ramo"><input type="checkbox" id="Métodos Estadísticos para la Gestión"><label for="Métodos Estadísticos para la Gestión">Métodos Estadísticos para la Gestión</label></div>
-    <div class="ramo"><input type="checkbox" id="Contabilidad y Estados Financieros"><label for="Contabilidad y Estados Financieros">Contabilidad y Estados Financieros</label></div>
-    <div class="ramo"><input type="checkbox" id="Concentración Tecnológica"><label for="Concentración Tecnológica">Concentración Tecnológica</label></div>
-    <div class="ramo"><input type="checkbox" id="Filosofía de las Ciencias"><label for="Filosofía de las Ciencias">Filosofía de las Ciencias</label></div>
-    <div class="ramo"><input type="checkbox" id="Minor"><label for="Minor">Minor</label></div>
-
-    <h2>Año 3 - Semestre VI</h2>
-    <div class="ramo"><input type="checkbox" id="Modelos Estocásticos"><label for="Modelos Estocásticos">Modelos Estocásticos</label></div>
-    <div class="ramo"><input type="checkbox" id="Programación Matemática"><label for="Programación Matemática">Programación Matemática</label></div>
-    <div class="ramo"><input type="checkbox" id="Bases de Datos"><label for="Bases de Datos">Bases de Datos</label></div>
-    <div class="ramo"><input type="checkbox" id="Microeconomía"><label for="Microeconomía">Microeconomía</label></div>
-    <div class="ramo"><input type="checkbox" id="Concentración Tecnológica"><label for="Concentración Tecnológica">Concentración Tecnológica</label></div>
-
-    <h2>Año 4 - Semestre VII</h2>
-    <div class="ramo"><input type="checkbox" id="Simulación"><label for="Simulación">Simulación</label></div>
-    <div class="ramo"><input type="checkbox" id="Econometría"><label for="Econometría">Econometría</label></div>
-    <div class="ramo"><input type="checkbox" id="Finanzas I"><label for="Finanzas I">Finanzas I</label></div>
-    <div class="ramo"><input type="checkbox" id="Pensamiento de Diseño Aplicado a Ingeniería"><label for="Pensamiento de Diseño Aplicado a Ingeniería">Pensamiento de Diseño Aplicado a Ingeniería</label></div>
-
-    <h2>Año 4 - Semestre VIII</h2>
-    <div class="ramo"><input type="checkbox" id="Diseño y Evaluación de Proyectos Industriales"><label for="Diseño y Evaluación de Proyectos Industriales">Diseño y Evaluación de Proyectos Industriales</label></div>
-    <div class="ramo"><input type="checkbox" id="Gestión de Operaciones"><label for="Gestión de Operaciones">Gestión de Operaciones</label></div>
-    <div class="ramo"><input type="checkbox" id="Finanzas II"><label for="Finanzas II">Finanzas II</label></div>
-    <div class="ramo"><input type="checkbox" id="Macroeconomía"><label for="Macroeconomía">Macroeconomía</label></div>
-    <div class="ramo"><input type="checkbox" id="Optativo Arte y Literatura / Historia y Pensamiento Contemporáneo"><label for="Optativo Arte y Literatura / Historia y Pensamiento Contemporáneo">Optativo Arte y Literatura / Historia y Pensamiento Contemporáneo</label></div>
-
-    <h2>Año 5 - Semestre IX</h2>
-    <div class="ramo"><input type="checkbox" id="Organización Industrial"><label for="Organización Industrial">Organización Industrial</label></div>
-    <div class="ramo"><input type="checkbox" id="Marketing"><label for="Marketing">Marketing</label></div>
-    <div class="ramo"><input type="checkbox" id="Logistics"><label for="Logistics">Logistics</label></div>
-    <div class="ramo"><input type="checkbox" id="Mención"><label for="Mención">Mención</label></div>
-    <div class="ramo"><input type="checkbox" id="Electivo Especialidad"><label for="Electivo Especialidad">Electivo Especialidad</label></div>
-
-    <h2>Año 5 - Semestre X</h2>
-    <div class="ramo"><input type="checkbox" id="Gestión Estratégica"><label for="Gestión Estratégica">Gestión Estratégica</label></div>
-    <div class="ramo"><input type="checkbox" id="Gestión de Personas y Desarrollo Organizacional"><label for="Gestión de Personas y Desarrollo Organizacional">Gestión de Personas y Desarrollo Organizacional</label></div>
-    <div class="ramo"><input type="checkbox" id="Proyecto de Título 1"><label for="Proyecto de Título 1">Proyecto de Título 1</label></div>
-    <div class="ramo"><input type="checkbox" id="Electivo"><label for="Electivo">Electivo</label></div>
-    <div class="ramo"><input type="checkbox" id="Seminario Ética Profesional"><label for="Seminario Ética Profesional">Seminario Ética Profesional</label></div>
-
-    <h2>Año 6 - Semestre XI</h2>
-    <div class="ramo"><input type="checkbox" id="Proyecto de Título 2"><label for="Proyecto de Título 2">Proyecto de Título 2</label></div>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
