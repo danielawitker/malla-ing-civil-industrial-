@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #8D6E63;
+  background-color: #8D6E63; /* Fondo general café oscuro */
   color: #3E2723;
   margin: 0;
   padding: 0;
@@ -24,7 +24,7 @@ h1 {
 }
 
 .semester {
-  background-color: #D7CCC8;
+  background-color: #D7CCC8; /* Fondo casillas */
   border-radius: 10px;
   padding: 15px;
   width: 320px;
@@ -52,10 +52,16 @@ h1 {
   border: 2px solid #8D6E63;
   border-radius: 6px;
   padding: 8px 12px;
-  background-color: #D7CCC8;
+  background-color: #EFEBE9; /* Ramo bloqueado color */
   color: #3E2723;
   transition: background-color 0.3s, color 0.3s, font-style 0.3s, text-decoration-color 0.3s;
   user-select: none;
+}
+
+.course.unlocked {
+  background-color: #D7CCC8; /* Ramo desbloqueado */
+  color: #3E2723;
+  pointer-events: auto;
 }
 
 .course.approved {
@@ -67,9 +73,6 @@ h1 {
 }
 
 .course.locked {
-  background-color: #EFEBE9;
-  color: #9E9E9E;
-  cursor: not-allowed;
   opacity: 0.6;
   pointer-events: none;
 }
