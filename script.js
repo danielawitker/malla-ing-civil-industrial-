@@ -13,15 +13,13 @@ const prerequisitos = {
   'termodinamica': ['calculo2', 'mecanica_ondas'],
   'estatica': ['mecanica_ondas'],
   'filosofia_ciencia': ['etica'],
-  'optimizacion': [],
   'modelos_estoc': ['optimizacion'],
   'prog_matematica': ['optimizacion'],
   'simulacion': ['modelos_estoc'],
   'gestion_operaciones': ['econometria'],
   'finanzas2': ['finanzas1'],
   'diseno_eval_proyectos': ['simulacion'],
-  'proyecto2': ['proyecto1'],
-  'seminario': []
+  'proyecto2': ['proyecto1']
 };
 
 // Funciones para guardar y cargar progreso en localStorage
@@ -53,7 +51,7 @@ function actualizarDesbloqueos() {
   }
 }
 
-// Maneja el clic para aprobar o desaprobar un ramo (solo si no está bloqueado)
+// Esta es la función que se llama desde el HTML al hacer clic
 function aprobar(id) {
   const ramo = document.getElementById(id);
   if (ramo.classList.contains('bloqueado')) return;
@@ -67,24 +65,17 @@ function aprobar(id) {
     const idx = aprobados.indexOf(ramo.id);
     if (idx > -1) aprobados.splice(idx, 1);
   }
-  guardarAprobados(aprobados);
 
+  guardarAprobados(aprobados);
   actualizarDesbloqueos();
 }
 
-// Al cargar la página, asignar eventos, cargar progreso y actualizar desbloqueos
+// Al cargar la página, aplicar estilos y desbloquear ramos
 window.addEventListener('DOMContentLoaded', () => {
-  const todosRamos = document.querySelectorAll('.ramo');
-
   const aprobados = obtenerAprobados();
-  todosRamos.forEach(ramo => {
-    if (aprobados.includes(ramo.id)) {
-      ramo.classList.add('aprobado');
-    }
-  });
-
-  todosRamos.forEach(ramo => {
-    ramo.addEventListener('click', () => aprobar(ramo.id));
+  aprobados.forEach(id => {
+    const elem = document.getElementById(id);
+    if (elem) elem.classList.add('aprobado');
   });
 
   actualizarDesbloqueos();
