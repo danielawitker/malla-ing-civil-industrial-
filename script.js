@@ -32,36 +32,38 @@ document.addEventListener("DOMContentLoaded", () => {
     "Proyecto de Título 2": ["Proyecto de Título 1"],
   };
 
+  const estado = {}; // Guarda si ramo está aprobado
+
   function actualizarEstado() {
-    const checkboxes = document.querySelectorAll("input[type=checkbox]");
-    const estado = {};
-
-    checkboxes.forEach((checkbox) => {
-      const ramo = checkbox.id.replace("chk-", "").replace(/-/g, " ");
-      estado[ramo] = checkbox.checked;
-    });
-
-    checkboxes.forEach((checkbox) => {
-      const ramo = checkbox.id.replace("chk-", "").replace(/-/g, " ");
-      const divCurso = checkbox.closest(".course");
-
-      if (!requisitos[ramo]) {
-        checkbox.disabled = false;
-        return;
-      }
-
-      const habilitado = requisitos[ramo].every((req) => estado[req]);
-      checkbox.disabled = !habilitado;
-
-      if (!habilitado) {
-        checkbox.checked = false;
+    document.querySelectorAll(".course").forEach((curso) => {
+      const nombre = curso.id;
+      const reqs = requisitos[nombre] || [];
+      const desbloqueado = reqs.every((r) => estado[r]);
+      
+      if (estado[nombre]) {
+        curso.classList.add("approved");
+        curso.classList.remove("locked");
+      } else if (!desbloqueado) {
+        curso.classList.add("locked");
+        curso.classList.remove("approved");
+      } else {
+        curso.classList.remove("approved");
+        curso.classList.remove("locked");
       }
     });
   }
 
-  document.querySelectorAll("input[type=checkbox]").forEach((checkbox) => {
-    checkbox.addEventListener("change", actualizarEstado);
+  document.querySelectorAll(".course").forEach((curso) => {
+    curso.addEventListener("click", () => {
+      const nombre = curso.id;
+      const reqs = requisitos[nombre] || [];
+      const desbloqueado = reqs.every((r) => estado[r]) || reqs.length === 0;
+      if (!desbloqueado) return;
+      estado[nombre] = !estado[nombre]; // alternar aprobado
+      actualizarEstado();
+    });
   });
 
-  actualizarEstado(); // Llamada inicial
+  // Inicializa el estado
+  actualizarEstado();
 });
