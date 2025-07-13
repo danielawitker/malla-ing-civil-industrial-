@@ -2,147 +2,147 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Malla Interactiva Ingeniería Civil Industrial</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malla Interactiva Ingeniería Civil Industrial – Universidad</title>
+  <meta name="description" content="Explora la malla curricular interactiva de Ingeniería Civil Industrial. Descubre requisitos por semestre y desbloquea ramos al aprobar.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="estilos.css" />
 </head>
+
 <body>
-  <h1>Malla Ingeniería Civil Industrial</h1>
-  <div class="grade-grid">
+  <h1>Ingeniería Civil Industrial</h1>
+  <div class="malla-grid">
 
-    <!-- Año 1 -->
-    <div class="semester">
-      <h2>Año 1 · Semestre I</h2>
-      <div class="courses">
-        <div class="course" id="Álgebra e Introducción al Cálculo"><span>Álgebra e Introducción al Cálculo</span></div>
-        <div class="course" id="Fundamentos de Química"><span>Fundamentos de Química</span></div>
-        <div class="course" id="Programación"><span>Programación</span></div>
-        <div class="course" id="Bases para el Estudio de la Ingeniería"><span>Bases para el Estudio de la Ingeniería</span></div>
-        <div class="course" id="Taller de Proyectos de Ingeniería"><span>Taller de Proyectos de Ingeniería</span></div>
-        <div class="course" id="Teología I"><span>Teología I</span></div>
-        <div class="course" id="Antropología Filosófica"><span>Antropología Filosófica</span></div>
-      </div>
+    <!-- SEMESTRES 1 a 11 -->
+    <!-- Por brevedad, te muestro los semestres del 1 al 11 en bloques -->
+
+    <!-- 1° Semestre -->
+    <div class="semestre" id="sem1">
+      <h2>1° Semestre</h2>
+      <div class="ramo" id="algebra_intro" onclick="aprobar('algebra_intro')">Álgebra e Introducción al Cálculo</div>
+      <div class="ramo" id="quimica" onclick="aprobar('quimica')">Fundamentos de Química</div>
+      <div class="ramo" id="programacion" onclick="aprobar('programacion')">Programación</div>
+      <div class="ramo" id="bases_ingenieria" onclick="aprobar('bases_ingenieria')">Bases para el Estudio de la Ingeniería</div>
+      <div class="ramo" id="taller_proyectos" onclick="aprobar('taller_proyectos')">Taller de Proyectos de Ingeniería</div>
+      <div class="ramo" id="teologia1" onclick="aprobar('teologia1')">Teología I</div>
+      <div class="ramo" id="antropologia" onclick="aprobar('antropologia')">Antropología Filosófica</div>
     </div>
 
-    <div class="semester">
-      <h2>Año 1 · Semestre II</h2>
-      <div class="courses">
-        <div class="course" id="Álgebra Lineal"><span>Álgebra Lineal</span></div>
-        <div class="course" id="Cálculo I"><span>Cálculo I</span></div>
-        <div class="course" id="Introducción a la Mecánica"><span>Introducción a la Mecánica</span></div>
-        <div class="course" id="Biología de los Microorganismos"><span>Biología de los Microorganismos</span></div>
-        <div class="course" id="Teología II"><span>Teología II</span></div>
-        <div class="course" id="Optativo Arte y Literatura / Historia y Pensamiento Contemporáneo"><span>Optativo Arte y Literatura / Historia y Pensamiento Contemporáneo</span></div>
-      </div>
+    <!-- 2° Semestre -->
+    <div class="semestre" id="sem2">
+      <h2>2° Semestre</h2>
+      <div class="ramo bloqueado" id="algebra_lineal" onclick="aprobar('algebra_lineal')">Álgebra Lineal</div>
+      <div class="ramo bloqueado" id="calculo1" onclick="aprobar('calculo1')">Cálculo I</div>
+      <div class="ramo bloqueado" id="mecanica" onclick="aprobar('mecanica')">Introducción a la Mecánica</div>
+      <div class="ramo bloqueado" id="biologia_micro" onclick="aprobar('biologia_micro')">Biología de los Microorganismos</div>
+      <div class="ramo bloqueado" id="teologia2" onclick="aprobar('teologia2')">Teología II</div>
+      <div class="ramo" id="optativo1" onclick="aprobar('optativo1')">Optativo Arte/Literatura o Historia/Pensamiento</div>
     </div>
 
-    <!-- Año 2 -->
-    <div class="semester">
-      <h2>Año 2 · Semestre III</h2>
-      <div class="courses">
-        <div class="course" id="Ecuaciones diferenciales"><span>Ecuaciones diferenciales</span></div>
-        <div class="course" id="Cálculo II"><span>Cálculo II</span></div>
-        <div class="course" id="Mecánica y Ondas"><span>Mecánica y Ondas</span></div>
-        <div class="course" id="Fundamentos de Economía"><span>Fundamentos de Economía</span></div>
-        <div class="course" id="Teología III"><span>Teología III</span></div>
-        <div class="course" id="Minor 1"><span>Minor</span></div>
-      </div>
+    <!-- 3° Semestre -->
+    <div class="semestre" id="sem3">
+      <h2>3° Semestre</h2>
+      <div class="ramo bloqueado" id="ecuaciones" onclick="aprobar('ecuaciones')">Ecuaciones Diferenciales</div>
+      <div class="ramo bloqueado" id="calculo2" onclick="aprobar('calculo2')">Cálculo II</div>
+      <div class="ramo bloqueado" id="mecanica_ondas" onclick="aprobar('mecanica_ondas')">Mecánica y Ondas</div>
+      <div class="ramo bloqueado" id="economia" onclick="aprobar('economia')">Fundamentos de Economía</div>
+      <div class="ramo bloqueado" id="teologia3" onclick="aprobar('teologia3')">Teología III</div>
+      <div class="ramo bloqueado" id="minor1" onclick="aprobar('minor1')">Minor</div>
     </div>
 
-    <div class="semester">
-      <h2>Año 2 · Semestre IV</h2>
-      <div class="courses">
-        <div class="course" id="Probabilidades y estadísticas"><span>Probabilidades y estadísticas</span></div>
-        <div class="course" id="Electricidad y Magnetismo"><span>Electricidad y Magnetismo</span></div>
-        <div class="course" id="Termodinámica"><span>Termodinámica</span></div>
-        <div class="course" id="Estática"><span>Estática</span></div>
-        <div class="course" id="Ética"><span>Ética</span></div>
-        <div class="course" id="Minor 2"><span>Minor</span></div>
-      </div>
+    <!-- 4° Semestre -->
+    <div class="semestre" id="sem4">
+      <h2>4° Semestre</h2>
+      <div class="ramo bloqueado" id="prob_estad" onclick="aprobar('prob_estad')">Probabilidades y Estadísticas</div>
+      <div class="ramo bloqueado" id="electromagnetismo" onclick="aprobar('electromagnetismo')">Electricidad y Magnetismo</div>
+      <div class="ramo bloqueado" id="termodinamica" onclick="aprobar('termodinamica')">Termodinámica</div>
+      <div class="ramo bloqueado" id="estatica" onclick="aprobar('estatica')">Estática</div>
+      <div class="ramo bloqueado" id="etica" onclick="aprobar('etica')">Ética</div>
+      <div class="ramo bloqueado" id="minor2" onclick="aprobar('minor2')">Minor</div>
     </div>
 
-    <!-- Año 3 -->
-    <div class="semester">
-      <h2>Año 3 · Semestre V</h2>
-      <div class="courses">
-        <div class="course" id="Optimización"><span>Optimización</span></div>
-        <div class="course" id="Métodos Estadísticos para la Gestión"><span>Métodos Estadísticos para la Gestión</span></div>
-        <div class="course" id="Contabilidad y Estados Financieros"><span>Contabilidad y Estados Financieros</span></div>
-        <div class="course" id="Concentración Tecnológica 1"><span>Concentración Tecnológica</span></div>
-        <div class="course" id="Filosofía de las Ciencias"><span>Filosofía de las Ciencias</span></div>
-        <div class="course" id="Minor 3"><span>Minor</span></div>
-      </div>
+    <!-- 5° Semestre -->
+    <div class="semestre" id="sem5">
+      <h2>5° Semestre</h2>
+      <div class="ramo bloqueado" id="optimizacion" onclick="aprobar('optimizacion')">Optimización</div>
+      <div class="ramo bloqueado" id="metodos_estad" onclick="aprobar('metodos_estad')">Métodos Estadísticos para la Gestión</div>
+      <div class="ramo bloqueado" id="contabilidad" onclick="aprobar('contabilidad')">Contabilidad y Estados Financieros</div>
+      <div class="ramo bloqueado" id="concentracion1" onclick="aprobar('concentracion1')">Concentración Tecnológica</div>
+      <div class="ramo bloqueado" id="filosofia_ciencia" onclick="aprobar('filosofia_ciencia')">Filosofía de las Ciencias</div>
+      <div class="ramo bloqueado" id="minor3" onclick="aprobar('minor3')">Minor</div>
     </div>
 
-    <div class="semester">
-      <h2>Año 3 · Semestre VI</h2>
-      <div class="courses">
-        <div class="course" id="Modelos Estocásticos"><span>Modelos Estocásticos</span></div>
-        <div class="course" id="Programación Matemática"><span>Programación Matemática</span></div>
-        <div class="course" id="Bases de Datos"><span>Bases de Datos</span></div>
-        <div class="course" id="Microeconomía"><span>Microeconomía</span></div>
-        <div class="course" id="Concentración Tecnológica 2"><span>Concentración Tecnológica</span></div>
-      </div>
+    <!-- 6° Semestre -->
+    <div class="semestre" id="sem6">
+      <h2>6° Semestre</h2>
+      <div class="ramo bloqueado" id="modelos_estoc" onclick="aprobar('modelos_estoc')">Modelos Estocásticos</div>
+      <div class="ramo bloqueado" id="prog_matematica" onclick="aprobar('prog_matematica')">Programación Matemática</div>
+      <div class="ramo bloqueado" id="bases_datos" onclick="aprobar('bases_datos')">Bases de Datos</div>
+      <div class="ramo bloqueado" id="microeconomia" onclick="aprobar('microeconomia')">Microeconomía</div>
+      <div class="ramo bloqueado" id="concentracion2" onclick="aprobar('concentracion2')">Concentración Tecnológica</div>
     </div>
 
-    <!-- Año 4 -->
-    <div class="semester">
-      <h2>Año 4 · Semestre VII</h2>
-      <div class="courses">
-        <div class="course" id="Simulación"><span>Simulación</span></div>
-        <div class="course" id="Econometría"><span>Econometría</span></div>
-        <div class="course" id="Finanzas I"><span>Finanzas I</span></div>
-        <div class="course" id="Concentración Tecnológica 3"><span>Concentración Tecnológica</span></div>
-        <div class="course" id="Pensamiento de Diseño Aplicado a Ingeniería"><span>Pensamiento de Diseño Aplicado a Ingeniería</span></div>
-      </div>
+    <!-- 7° Semestre -->
+    <div class="semestre" id="sem7">
+      <h2>7° Semestre</h2>
+      <div class="ramo bloqueado" id="simulacion" onclick="aprobar('simulacion')">Simulación</div>
+      <div class="ramo bloqueado" id="econometria" onclick="aprobar('econometria')">Econometría</div>
+      <div class="ramo bloqueado" id="finanzas1" onclick="aprobar('finanzas1')">Finanzas I</div>
+      <div class="ramo bloqueado" id="concentracion3" onclick="aprobar('concentracion3')">Concentración Tecnológica</div>
+      <div class="ramo bloqueado" id="pensamiento_diseno" onclick="aprobar('pensamiento_diseno')">Pensamiento de Diseño Aplicado a Ingeniería</div>
     </div>
 
-    <div class="semester">
-      <h2>Año 4 · Semestre VIII</h2>
-      <div class="courses">
-        <div class="course" id="Diseño y Evaluación de Proyectos Industriales"><span>Diseño y Evaluación de Proyectos Industriales</span></div>
-        <div class="course" id="Gestión de Operaciones"><span>Gestión de Operaciones</span></div>
-        <div class="course" id="Finanzas II"><span>Finanzas II</span></div>
-        <div class="course" id="Macroeconomía"><span>Macroeconomía</span></div>
-        <div class="course" id="Optativo Arte y Literatura / Historia y Pensamiento Contemporáneo"><span>Optativo Arte y Literatura / Historia y Pensamiento Contemporáneo</span></div>
-      </div>
+    <!-- 8° Semestre -->
+    <div class="semestre" id="sem8">
+      <h2>8° Semestre</h2>
+      <div class="ramo bloqueado" id="diseno_eval_proyectos" onclick="aprobar('diseno_eval_proyectos')">Diseño y Evaluación de Proyectos Industriales</div>
+      <div class="ramo bloqueado" id="gestion_operaciones" onclick="aprobar('gestion_operaciones')">Gestión de Operaciones</div>
+      <div class="ramo bloqueado" id="finanzas2" onclick="aprobar('finanzas2')">Finanzas II</div>
+      <div class="ramo bloqueado" id="macroeconomia" onclick="aprobar('macroeconomia')">Macroeconomía</div>
+      <div class="ramo" id="optativo2" onclick="aprobar('optativo2')">Optativo Arte/Literatura o Historia/Pensamiento</div>
     </div>
 
-    <!-- Año 5 -->
-    <div class="semester">
-      <h2>Año 5 · Semestre IX</h2>
-      <div class="courses">
-        <div class="course" id="Organización Industrial"><span>Organización Industrial</span></div>
-        <div class="course" id="Marketing"><span>Marketing</span></div>
-        <div class="course" id="Logistics"><span>Logistics</span></div>
-        <div class="course" id="Mención 1"><span>Mención</span></div>
-        <div class="course" id="Electivo Especialidad 1"><span>Electivo Especialidad</span></div>
-      </div>
+    <!-- 9° Semestre -->
+    <div class="semestre" id="sem9">
+      <h2>9° Semestre</h2>
+      <div class="ramo bloqueado" id="org_industrial" onclick="aprobar('org_industrial')">Organización Industrial</div>
+      <div class="ramo bloqueado" id="marketing" onclick="aprobar('marketing')">Marketing</div>
+      <div class="ramo bloqueado" id="logistica" onclick="aprobar('logistica')">Logistics</div>
+      <div class="ramo bloqueado" id="mencion1" onclick="aprobar('mencion1')">Mención</div>
+      <div class="ramo bloqueado" id="electivo_esp1" onclick="aprobar('electivo_esp1')">Electivo Especialidad</div>
     </div>
 
-    <div class="semester">
-      <h2>Año 5 · Semestre X</h2>
-      <div class="courses">
-        <div class="course" id="Gestión Estratégica"><span>Gestión Estratégica</span></div>
-        <div class="course" id="Gestión de Personas y Desarrollo Organizacional"><span>Gestión de Personas y Desarrollo Organizacional</span></div>
-        <div class="course" id="Proyecto de Título 1"><span>Proyecto de Título 1</span></div>
-        <div class="course" id="Mención 2"><span>Mención</span></div>
-        <div class="course" id="Electivo"><span>Electivo</span></div>
-        <div class="course" id="Seminario Ética Profesional"><span>Seminario Ética Profesional</span></div>
-      </div>
+    <!-- 10° Semestre -->
+    <div class="semestre" id="sem10">
+      <h2>10° Semestre</h2>
+      <div class="ramo bloqueado" id="gestion_estrategica" onclick="aprobar('gestion_estrategica')">Gestión Estratégica</div>
+      <div class="ramo bloqueado" id="gestion_personas" onclick="aprobar('gestion_personas')">Gestión de Personas y Desarrollo Organizacional</div>
+      <div class="ramo bloqueado" id="proyecto1" onclick="aprobar('proyecto1')">Proyecto de Título 1</div>
+      <div class="ramo bloqueado" id="mencion2" onclick="aprobar('mencion2')">Mención</div>
+      <div class="ramo bloqueado" id="electivo2" onclick="aprobar('electivo2')">Electivo</div>
+      <div class="ramo bloqueado" id="seminario" onclick="aprobar('seminario')">Seminario Ética Profesional</div>
     </div>
 
-    <!-- Año 6 -->
-    <div class="semester">
-      <h2>Año 6 · Semestre XI</h2>
-      <div class="courses">
-        <div class="course" id="Electivo Especialidad 2"><span>Electivo Especialidad</span></div>
-        <div class="course" id="Mención 3"><span>Mención</span></div>
-        <div class="course" id="Proyecto de Título 2"><span>Proyecto de Título 2</span></div>
-      </div>
+    <!-- 11° Semestre -->
+    <div class="semestre" id="sem11">
+      <h2>11° Semestre</h2>
+      <div class="ramo bloqueado" id="electivo_esp2" onclick="aprobar('electivo_esp2')">Electivo Especialidad</div>
+      <div class="ramo bloqueado" id="mencion3" onclick="aprobar('mencion3')">Mención</div>
+      <div class="ramo bloqueado" id="proyecto2" onclick="aprobar('proyecto2')">Proyecto de Título 2</div>
     </div>
 
   </div>
+
   <script src="script.js"></script>
+
+  <style>
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      color: #1976d2;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  </style>
 </body>
 </html>
