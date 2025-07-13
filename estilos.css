@@ -1,1 +1,46 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ffe6f0;
+    color: #333;
+    padding: 20px;
+}
 
+h1 {
+    color: #cc0066;
+}
+
+h2 {
+    color: #cc3399;
+    margin-top: 30px;
+}
+
+.ramo {
+    background: white;
+    border: 2px solid #ff66b2;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.ramo:hover {
+    background-color: #fff0f5;
+}
+
+.ramo input[type="checkbox"]:disabled + label {
+    color: #aaa;
+    cursor: not-allowed;
+}
+
+.ramo input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: #009933;
+}
+
+label {
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: 500;
+}
