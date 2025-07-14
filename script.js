@@ -1,42 +1,46 @@
-// Prerrequisitos de cada ramo (ramos que deben estar aprobados para desbloquear este)
+// Prerrequisitos actualizados desde PDF oficial
 const prerequisitos = {
-  'algebra_lineal': ['algebra_intro'],
-  'calculo1': ['algebra_intro'],
-  'mecanica': ['algebra_intro'],
-  'biologia_micro': ['bases_ingenieria'],
-  'teologia2': ['teologia1'],
-  'ecuaciones': ['algebra_lineal', 'calculo1'],
-  'calculo2': ['calculo1'],
-  'mecanica_ondas': ['mecanica'],
-  'economia': ['algebra_intro'],
-  'teologia3': ['teologia2'],
-  'minor1': ['algebra_intro', 'programacion', 'bases_ingenieria', 'quimica', 'taller_proyectos']
-  'prob_estad': ['calculo2'],
-  'electromagnetismo': ['calculo2', 'mecanica_ondas'],
-  'termodinamica': ['quimica', 'calculo2', 'mecanica_ondas'],
-  'estatica': ['calculo1', 'mecanica_ondas'],
-  'minor2': ['minor1'],
-  'etica': ['antropologia'],
-  'optimizacion': ['calculo2'],
-  'metodos_estad': ['prob_estad'],
-  'contabilidad': ['economia'],
-  'concentracion1': ['prob_estad', 'electromagnetismo', 'termodinamica', 'estatica', 'etica', 'minor2'],
-  'filosofia_ciencia': ['etica'],
-  'minor3': ['minor2'],
-  'modelos_estoc': ['prob_estad', 'optimizacion'],
-  'prog_matematica': ['prob_estad','optimizacion'],
-  'bases_datos': ['programacion'],
-  'simulacion': ['metodos_estad', 'modelos_estoc'],
-  'microeconomia': ['economia'],
-  'concentracion2': ['optimizacion', 'metodos_estad', 'contabilidad', 'concentracion1'],
-  'econometria': ['metodos_estad'],
-  'finanzas1': ['contabilidad'],
-  'concentracion3': ['modelos_estoc', 'prog_matematica', 'bases_datos', 'microeconomia', 'concentracion2'],
-  'pensamiento_diseno': ['modelos_estoc', 'prog_matematica', 'bases_datos', 'microeconomia', 'concentracion2'],
-  'gestion_operaciones': ['econometria'],
-  'finanzas2': ['finanzas1'],
-  'diseno_eval_proyectos': ['simulacion'],
-  'proyecto2': ['proyecto1']
+  "algebra_lineal": ["algebra_intro", "programacion", "bases_ingenieria"],
+  "calculo1": ["algebra_intro", "bases_ingenieria"],
+  "mecanica": ["algebra_intro"],
+  "biologia_micro": ["bases_ingenieria"],
+  "teologia2": ["teologia1"],
+  "etica": ["antropologia"],
+  "teologia3": ["teologia2"],
+  "ecuaciones": ["algebra_lineal", "calculo1", "programacion"],
+  "calculo2": ["calculo1", "programacion"],
+  "mecanica_ondas": ["mecanica"],
+  "prob_estad": ["calculo2"],
+  "electromagnetismo": ["calculo2", "mecanica_ondas"],
+  "termodinamica": ["calculo2", "mecanica_ondas", "quimica"],
+  "estatica": ["calculo1", "mecanica_ondas"],
+  "filosofia_ciencia": ["etica"],
+  "microeconomia": ["economia"],
+  "macroeconomia": ["economia"],
+  "minor2": ["minor1"],
+  "minor3": ["minor2"],
+  "optimizacion": ["calculo2"],
+  "modelos_estoc": ["optimizacion", "prob_estad"],
+  "prog_matematica": ["optimizacion", "prob_estad"],
+  "simulacion": ["modelos_estoc", "metodos_estad"],
+  "econometria": ["metodos_estad"],
+  "finanzas1": ["contabilidad"],
+  "concentracion2": ["concentracion1"],
+  "concentracion3": ["concentracion2"],
+  "pensamiento_diseno": ["concentracion2"],
+  "diseno_eval_proyectos": ["simulacion"],
+  "gestion_operaciones": ["econometria", "prog_matematica"],
+  "finanzas2": ["finanzas1"],
+  "gestion_estrategica": ["diseno_eval_proyectos"],
+  "gestion_personas": ["diseno_eval_proyectos"],
+  "logistica": ["gestion_operaciones"],
+  "marketing": ["econometria"],
+  "mencion2": ["org_industrial"],
+  "electivo_esp2": ["org_industrial"],
+  "seminario": ["org_industrial"],
+  "mencion3": ["gestion_estrategica"],
+  "electivo_esp3": ["gestion_estrategica"],
+  "proyecto2": ["proyecto1"]
 };
 
 // Funciones para guardar y cargar progreso en localStorage
@@ -68,7 +72,7 @@ function actualizarDesbloqueos() {
   }
 }
 
-// Esta es la función que se llama desde el HTML al hacer clic
+// Esta función se llama desde el HTML con onclick
 function aprobar(id) {
   const ramo = document.getElementById(id);
   if (ramo.classList.contains('bloqueado')) return;
@@ -87,7 +91,7 @@ function aprobar(id) {
   actualizarDesbloqueos();
 }
 
-// Al cargar la página, aplicar estilos y desbloquear ramos
+// Carga inicial al abrir la página
 window.addEventListener('DOMContentLoaded', () => {
   const aprobados = obtenerAprobados();
   aprobados.forEach(id => {
