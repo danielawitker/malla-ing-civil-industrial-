@@ -1,12 +1,12 @@
-// Prerrequisitos actualizados desde PDF oficial
+// Prerrequisitos ajustados para coincidir con IDs reales del HTML
 const prerequisitos = {
   "algebra_lineal": ["algebra_intro", "programacion", "bases_ingenieria"],
   "calculo1": ["algebra_intro", "bases_ingenieria"],
   "mecanica": ["algebra_intro"],
   "biologia_micro": ["bases_ingenieria"],
   "teologia2": ["teologia1"],
-  "etica": ["antropologia"],
   "teologia3": ["teologia2"],
+  "etica": ["antropologia"],
   "ecuaciones": ["algebra_lineal", "calculo1", "programacion"],
   "calculo2": ["calculo1", "programacion"],
   "mecanica_ondas": ["mecanica"],
@@ -15,8 +15,6 @@ const prerequisitos = {
   "termodinamica": ["calculo2", "mecanica_ondas", "quimica"],
   "estatica": ["calculo1", "mecanica_ondas"],
   "filosofia_ciencia": ["etica"],
-  "microeconomia": ["economia"],
-  "macroeconomia": ["economia"],
   "minor2": ["minor1"],
   "minor3": ["minor2"],
   "optimizacion": ["calculo2"],
@@ -91,7 +89,7 @@ function aprobar(id) {
   actualizarDesbloqueos();
 }
 
-// Carga inicial al abrir la página
+// Al cargar la página, marcar ramos aprobados y actualizar desbloqueos
 window.addEventListener('DOMContentLoaded', () => {
   const aprobados = obtenerAprobados();
   aprobados.forEach(id => {
